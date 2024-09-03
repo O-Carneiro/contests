@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+#define MAC0214 std::ios_base::sync_with_stdio(false);
+#define coxa std::cin.tie(NULL);
+#define int long long
+using namespace std;
+
+void solve(){
+    int a,b; cin >> a >> b;
+    int min = 4500;
+    for(int i = 1; i <= max(a,b); i++){
+        if((i-a) + (b-i) < min){
+            min = (i-a) + (b-i);
+        }
+    }
+    cout << min << '\n';
+}
+
+signed main(){
+    MAC0214 coxa
+    int t; cin >> t;
+    while(t--) solve();
+    return 0;
+}
