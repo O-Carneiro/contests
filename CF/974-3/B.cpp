@@ -7,7 +7,13 @@
 using namespace std;
 
 void solve(){
-
+    int n, k; cin >> n >> k;
+    int flgN =((n+1)/2) % 2;
+    int flgK =((n-k+1)/2) % 2;
+    if(!flgN && !flgK) cout << "YES\n";
+    else if(flgN && !flgK) cout << "NO\n";
+    else if(!flgN && flgK) cout << "NO\n";
+    else cout << "YES\n";
 }
 
 signed main(){

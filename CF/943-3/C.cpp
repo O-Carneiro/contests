@@ -7,7 +7,12 @@
 using namespace std;
 
 void solve(){
+    int n; cin >> n;
+    int x[n-1], a[n];
+    for(int i = 0; i < n-1; i++) cin >> x[i];
 
+    for(auto i : a) cout << i << ' ';
+    cout << '\n';
 }
 
 signed main(){

@@ -7,7 +7,14 @@
 using namespace std;
 
 void solve(){
+    string s;cin >> s;
 
+    if(s[0] != 'y' && s[0] != 'Y') {cout << "NO\n"; return;}
+    if(s[1] != 'e' && s[1] != 'E') {cout << "NO\n"; return;}
+    if(s[2] != 's' && s[2] != 'S') {cout << "NO\n"; return;}
+
+    cout << "YES\n";
+    return;
 }
 
 signed main(){

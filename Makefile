@@ -15,7 +15,7 @@ all: $(TARGETS)
 
 # Clean rule to delete executables in child directories only
 clean:
-	find . -mindepth 2 -type f -executable -exec rm -f {} +
+	find . -mindepth 3 -type f -executable -exec rm -f {} +
 
 # Clean_local rule to delete executables in the current directory only
 clean_local:

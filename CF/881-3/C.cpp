@@ -7,7 +7,14 @@
 using namespace std;
 
 void solve(){
-
+    int n; cin >> n;
+    int ans = 0;
+    while(n > 0){
+        ans += n;
+        if(n & 1) n -= 1, n/=2;
+        else n/=2;
+    }
+    cout << ans << '\n';
 }
 
 signed main(){

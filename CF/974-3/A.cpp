@@ -7,7 +7,15 @@
 using namespace std;
 
 void solve(){
-
+    int n, k; cin >> n >> k;
+    int gold = 0;
+    int cont = 0;
+    for(int i = 0; i < n; i++){
+        int a; cin >> a;
+        if(a >= k)gold+=a;
+        else if(gold > 0 && !a) gold--, cont++;
+    }
+    cout << cont << '\n';
 }
 
 signed main(){

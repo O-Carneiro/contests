@@ -7,7 +7,18 @@
 using namespace std;
 
 void solve(){
+    int x; cin >> x;
+    int maximo = 0;
+    int y = 0;
+    for(int i = 1; i < x; i++){
+        int div = gcd(i,x);
+        if(div + i > maximo){
+            maximo = div + i;
+            y = i;
+        }
 
+    }
+    cout << y << '\n';
 }
 
 signed main(){

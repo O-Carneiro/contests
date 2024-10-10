@@ -7,7 +7,18 @@
 using namespace std;
 
 void solve(){
-
+    int n; cin >> n;
+    string s; cin >> s;
+    vector<bool> appeared(26,false);
+    int baloons = 0;
+    for(int i = 0; i < s.size(); i++){
+        if(!appeared[s[i]-'A']){
+            baloons++;
+            appeared[s[i]-'A'] = true;
+        }
+        baloons++;
+    }
+    cout << baloons << '\n';
 }
 
 signed main(){

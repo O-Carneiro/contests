@@ -7,7 +7,14 @@
 using namespace std;
 
 void solve(){
-
+    int n; cin >> n;
+    vector<int> a(n,0), x(n); a[0] = 1000; 
+    for(int i = 0; i < n-1; i++) cin >> x[i];
+    for(int i = 1; i < n; i++){
+        a[i] = a[i-1] + x[i-1];
+    }
+    for(int i : a) cout << i << ' ';
+    cout << '\n';
 }
 
 signed main(){
