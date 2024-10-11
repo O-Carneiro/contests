@@ -6,13 +6,36 @@
 #define int long long
 using namespace std;
 
-void solve(){
-
-}
+using vll = vector<int>;
+using pll = pair<int, int>;
+using vpll = vector<pll>;
+using vvll = vector<vll>;
+using vvpll = vector<vpll>;
 
 signed main(){
     MAC0214 muito coxa
-    int t; cin >> t;
-    while(t--) solve();
+    int n, q, sapo=1; cin >> n;
+    vll vet(n+1, 0); 
+    vll pulos;
+    set<int> freeFoia;
+    for(int i = 0; i < 2*1e6; i++){
+        freeFoia.insert(i+1);
+    }
+    for(int i=0; i<n; i++){
+        int in;
+        cin >> in;
+        vet[i+1]=in;
+        freeFoia.erase(in);
+    }
+    cin >> q;
+    for(int i=0; i<q; i++){
+        int jp; cin >> jp;
+        int ans = *freeFoia.upper_bound(vet[jp]);
+        cout << ans << '\n';
+        freeFoia.insert(vet[jp]);
+        freeFoia.erase(ans);
+        vet[jp] = ans;
+    }
+    
     return 0;
 }

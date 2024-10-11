@@ -6,6 +6,12 @@
 #define int long long
 using namespace std;
 
+using vll = vector<int>;
+using pll = pair<int, int>;
+using vpll = vector<pll>;
+using vvll = vector<vll>;
+using vvpll = vector<vpll>;
+
 void solve(){
 
 }
