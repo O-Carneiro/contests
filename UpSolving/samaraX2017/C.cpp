@@ -28,12 +28,32 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
-
+    ll a, b, c; cin >> a >> b >> c;
+    ll n, m; cin >> n >> m;
+    if(a+c <= n && b + c <=m) {
+        cout << a + b + c << '\n';
+        return;
+    }
+    ll l = 0, r = 1e9, mid;
+    while(l <= r){
+        mid = (l+r)/2;
+        if(min(mid, b+c)<=m) l = mid+1;
+        else r = mid-1;
+    }
+    ll possibleM = r;
+    l = 0, r = 1e9;
+    while(l <= r){
+        mid = (l+r)/2;
+        if(min(mid, a+c)<=n) l = mid+1;
+        else r = mid-1;
+    }
+    ll possibleN = r;
+    cout << min({possibleM,possibleN}) << '\n';
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t=1;
     while(t--) solve();
     return 0;
 }

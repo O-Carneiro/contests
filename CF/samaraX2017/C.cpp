@@ -28,12 +28,15 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
-
+    ll a, b, c; cin >> a >> b >> c;
+    ll n, m; cin >> n >> m;
+    if(a+b+c <= n+m) cout << a+b+c <<'\n';
+    else cout << min({m, n}) << '\n';
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t=1;
     while(t--) solve();
     return 0;
 }

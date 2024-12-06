@@ -28,12 +28,35 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
+    ll n, soma=0, l=0, lf;
+    vll m;
 
+    cin >> n;
+
+    for(ll i=0; i<n; i++){
+        ll in; cin >> in;
+        m.pb(in);
+        soma+=in;
+    }
+
+    if(soma>n-1) NO
+    else{
+        YES
+        while(m[l]!=0) l++;
+        lf=n-1;
+        for(ll i=l; i>=0; i--){
+            while(m[i]>0){
+                cout << i+1 << " " << lf+1 << "\n";
+                lf--;
+                m[i]--;
+            }
+        }
+    }
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t; t=1;
     while(t--) solve();
     return 0;
 }

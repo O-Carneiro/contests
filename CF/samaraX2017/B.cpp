@@ -28,12 +28,34 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
-
+    string s, sub = "happiness"; cin >> s;
+    vector<ll> positions;
+    ll pos = s.find(sub,0);
+    while(pos != -1){
+        positions.pb(pos);
+        pos=s.find(sub,pos+1);
+        if(positions.size() >= 3){
+            NO 
+            return;
+        }
+    }
+    if(positions.size() == 2) {
+        YES 
+        cout << positions[0]+1 << ' ' << positions[1]+2 << '\n';
+    }
+    else if (positions.size()){
+        YES 
+        cout << positions[0]+1 << ' ' << positions[0]+2 << '\n';
+    }
+    else {
+        YES
+        cout << 0 << ' ' << 0 << '\n';
+    }
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t = 1;
     while(t--) solve();
     return 0;
 }

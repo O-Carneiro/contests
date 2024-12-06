@@ -28,12 +28,19 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
-
+    ll n, x; cin >> n >> x;
+    ll a; cin >> a;
+    for(ll i = 1; i < n; i++){
+        ll k; cin >> k;
+        a = gcd(a, k);
+    }
+    if(x % a == 0) YES 
+    else NO  
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t = 1;
     while(t--) solve();
     return 0;
 }

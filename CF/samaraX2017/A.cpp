@@ -28,7 +28,7 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
-
+    
 }
 
 signed main(){

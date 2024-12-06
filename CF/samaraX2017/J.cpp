@@ -28,12 +28,29 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
+    ll n;
+    bool flag=false;
 
+    cin >> n;
+    vll grau(n+1, 0);
+
+    for(ll i=0; i<n-1; i++){
+        ll in, in2; cin >> in >> in2;
+        grau[in]++; grau[in2]++;
+    }
+
+    for(ll i=1; i<=n; i++){
+        if(grau[i]>3){
+            flag=true;
+        }
+    }
+    if(flag) NO
+    else YES
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t=1;
     while(t--) solve();
     return 0;
 }

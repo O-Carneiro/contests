@@ -28,12 +28,29 @@ using vvll = vector<vll>;
 using vvpll = vector<vpll>;
 
 void solve(){
+    int n; cin >> n;
+    vector<pair<int,string>> names(n);
+    for(int i = 0; i < n; i++){
+        cin >> names[i].S;
+        names[i].F = 0;
+    }
+    int m; cin >> m;
+    for(int i = 0; i < m; i++){
+        int a, b; cin >> a >> b;
+        a--,b--;
+        names[a].S = names[b].S;
 
+        names[a].F = names[b].F+1;
+    }
+    while(names[0].F--){
+        cout << "I_love_";
+    }
+    cout << names[0].S << '\n';
 }
 
 signed main(){
     MAC0214 muito coxa
-    ll t; cin >> t;
+    ll t=1;
     while(t--) solve();
     return 0;
 }
