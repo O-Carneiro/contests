@@ -196,7 +196,7 @@ que tinha um enunciado complicado. Achamos a qualidade desse contest meio estran
 
 [Código](https://github.com/O-Carneiro/contests/tree/master/CF/samaraX2017) [Upsolving](https://github.com/O-Carneiro/contests/tree/master/UpSolving/samaraX2017)
 
-##Total de horas 18h + 37.75h + 25h + 25.25h = 106h
+## Total de horas 18h + 37.75h + 25h + 25.25h = 106h
 - Contest/Competições: 88h
 - Upsolving: 18h
 
